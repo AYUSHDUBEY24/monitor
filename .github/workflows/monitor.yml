@@ -1,0 +1,25 @@
+name: Website Monitor
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # har 5 minute run hoga
+  workflow_dispatch:        # manual run bhi kar sakte ho
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 - Get Code
+        uses: actions/checkout@v3
+
+      - name: Step 2 - Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Step 3 - Install Libraries
+        run: pip install -r requirements.txt
+
+      - name: Step 4 - Run Script
+        run: python monitor.py
