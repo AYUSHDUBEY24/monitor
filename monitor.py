@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 
 
-URL ="https://ayushdubey24.github.io/devops/"
+URL ="https://fake123.com"
 
 def check_website():
     try:
