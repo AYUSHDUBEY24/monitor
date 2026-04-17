@@ -22,7 +22,7 @@ def log_status(status):
     with open("log.txt", "a") as file:
         file.write(f"{datetime.now()} - {status}\n")
 
-# 👉 Main execution
+
 status = check_website()
 log_status(status)
 
